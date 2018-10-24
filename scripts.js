@@ -43,4 +43,5 @@ function decideTheWinner(player, computer) {
 function game() {
 }
 
-window.onLoad(game());
+const gameButton = document.querySelector("#game");
+gameButton.addEventListener("click",game());

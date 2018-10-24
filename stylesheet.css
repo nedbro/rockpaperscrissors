@@ -1,0 +1,37 @@
+* {
+    font-family:"Roboto",sans-serif;
+}
+body {
+    background-color:#6ec6ff;
+}
+header{
+    display:flex;
+    background-color: #2196f3;
+}
+
+h1 {
+    margin: 0.6em auto;
+    font-family:"Roboto",sans-serif;
+}
+
+.container {
+    display:flex;
+    margin:0 auto;
+    padding-top: 10em;
+}
+
+#game {
+    margin: 0 auto;
+    padding: 1em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: #2196f3;
+
+    font-size: 1.8em;
+
+}
+
+#game:hover {
+    background-color:#0069c0;
+    color: white;
+}
