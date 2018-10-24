@@ -47,6 +47,4 @@ function game() {
 }
 
 const gameButton = document.querySelector("#game");
-gameButton.addEventListener("click",function (){
-    game();
-});
+gameButton.addEventListener("click",game);
