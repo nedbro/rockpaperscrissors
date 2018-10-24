@@ -16,12 +16,12 @@ h1 {
 
 .container {
     display:flex;
-    margin:0 auto;
-    padding: 10em 30%;
+    flex-wrap: wrap;
+    margin: 10em;
+    justify-content: center;
 }
 
 #game {
-    margin: 0 auto;
     padding: 1em;
     border: none;
     border-radius: 0.5em;
@@ -36,8 +36,13 @@ h1 {
     color: white;
 }
 
+.container h1 {
+    text-align:center;
+    width: 100%;
+    margin-bottom: 4em;
+}
 .choices {
-    margin: 0 auto;
+    margin: 1em;
     padding: 2em;
     border:none;
     border-radius: 0.5em;

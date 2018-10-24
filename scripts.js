@@ -34,6 +34,23 @@ function displayPlayerChoices() {
 
 }
 
+function displayGameButton() {
+    let element = document.getElementById("game");
+
+    if (element === null) {
+
+        element = document.createElement("button");
+        element.id = "game";
+        element.textContent = "Start a new game!"
+
+        container.appendChild(element);
+
+    } else {
+        element.remove();
+    }
+
+}
+
 function decideTheWinner(player, computer) {
     if (player == computer) {
 
@@ -83,11 +100,12 @@ function win(playerChoice,computerChoice,winner) {
     }
 
     container.appendChild(announcement);
+    displayGameButton();
 
 }
 
 function game() {
-    gameButton.style.display = "none";
+    displayGameButton();
     displayPlayerChoices(); 
 }
 
