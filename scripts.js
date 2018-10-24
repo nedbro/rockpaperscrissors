@@ -66,6 +66,26 @@ function decideTheWinner(player, computer) {
 
 }
 
+function win(playerChoice,computerChoice,winner) {
+    displayPlayerChoices();
+
+    let announcement = document.createElement("h1");
+
+    playerChoice = playerChoice.toUpperCase();
+    computerChoice = computerChoice.toUpperCase();
+    
+    if(winner == "draw") {
+        announcement.textContent = playerChoice + " VS " + computerChoice +" DRAW!";
+    } else if (winner == "player") {
+        announcement.textContent = playerChoice + " VS " + computerChoice + " THE PLAYER WON";
+    } else {
+        announcement.textContent = playerChoice + " VS " + computerChoice + " THE COMPUTER WON";
+    }
+
+    container.appendChild(announcement);
+
+}
+
 function game() {
     gameButton.style.display = "none";
     displayPlayerChoices(); 
