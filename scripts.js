@@ -1,10 +1,16 @@
 function computerPlay() {
-    let options = ["rock", "paper", "scrissors"];
     let choice = options[Math.floor(Math.random() * options.length)];
     return choice;
 }
 
-function playerInput() {
+function showPlayerChoices() {
+
+    for(let i = 0; i < 3; i++){
+        let element = document.createElement("button");
+        element.className = "choices";
+        element.textContent = options[i];
+        container.appendChild(element);
+    }
 }
 
 
@@ -44,7 +50,11 @@ function game() {
     gameButton.style.display = "none";
 
     let computerChoice = computerPlay();
+    showPlayerChoices();
 }
 
 const gameButton = document.querySelector("#game");
 gameButton.addEventListener("click",game);
+
+const container = document.querySelector(".container");
+const options = ["rock", "paper", "scrissors"];
