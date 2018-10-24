@@ -36,16 +36,18 @@ function displayPlayerChoices() {
 
 function displayGameButton() {
     let element = document.getElementById("game");
+    let announcement = document.getElementById("announcement");
 
     if (element === null) {
 
         element = document.createElement("button");
         element.id = "game";
         element.textContent = "Start a new game!"
-
+        element.addEventListener("click",game);
         container.appendChild(element);
 
     } else {
+        if(announcement != null) announcement.remove();
         element.remove();
     }
 
@@ -99,6 +101,7 @@ function win(playerChoice,computerChoice,winner) {
         announcement.textContent = playerChoice + " VS " + computerChoice + " THE COMPUTER WON";
     }
 
+    announcement.id = "announcement";
     container.appendChild(announcement);
     displayGameButton();
 
