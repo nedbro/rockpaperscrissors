@@ -57,8 +57,6 @@ function decideTheWinner(player, computer) {
 function game() {
     gameButton.style.display = "none";
     showPlayerChoices();
-
-    let computerChoice = computerPlay();
     
 }
 
