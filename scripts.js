@@ -9,18 +9,28 @@ function playerInput(e){
 }
 
 
-function showPlayerChoices() {
+function displayPlayerChoices() {
+    let elements = document.querySelectorAll(".choices");
 
-    for(let i = 0; i < 3; i++){
-        let element = document.createElement("button");
-        element.className = "choices";
-        element.textContent = options[i];
-        element.addEventListener("click",playerInput);
-        container.appendChild(element);
+    if (elements.length === 0) {
+
+        for(let i = 0; i < 3; i++){
+           let element = document.createElement("button");
+            element.className = "choices";
+            element.textContent = options[i];
+            element.addEventListener("click",playerInput);
+            container.appendChild(element);
+        }
+
+    } else {
+
+        for(let i = 0; i < elements.length; i++){
+            elements[i].remove();
+        }
+
     }
 
 }
-
 
 function decideTheWinner(player, computer) {
     if (player == computer) {
@@ -56,9 +66,10 @@ function decideTheWinner(player, computer) {
 
 function game() {
     gameButton.style.display = "none";
-    showPlayerChoices();
-    
+    displayPlayerChoices(); 
 }
+
+
 
 const gameButton = document.querySelector("#game");
 gameButton.addEventListener("click",game);
