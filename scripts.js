@@ -41,7 +41,12 @@ function decideTheWinner(player, computer) {
 }
 
 function game() {
+    gameButton.style.display = "none";
+
+    let computerChoice = computerPlay();
 }
 
 const gameButton = document.querySelector("#game");
-gameButton.addEventListener("click",game());
+gameButton.addEventListener("click",function (){
+    game();
+});
