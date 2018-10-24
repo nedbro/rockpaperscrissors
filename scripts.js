@@ -6,6 +6,8 @@ function computerPlay() {
 function playerInput(e){
     let playerInput = e.target.textContent;
     if(playerInput != "rock" && playerInput != "paper" && playerInput != "scrissors") return;
+
+    decideTheWinner(playerInput,computerPlay());
 }
 
 
