@@ -5,22 +5,8 @@ function computerPlay() {
 }
 
 function playerInput() {
-    let playerChoice;
-
-    while (playerChoice != "paper" && playerChoice != "rock" && playerChoice != "scrissors") {
-        playerChoice = prompt("Welcome to Rock-Paper-Scrissors! \n What do you choose? Rock - Paper or Scrissors?").toLowerCase();
-    }
-
-    return playerChoice;
 }
 
-function win(player, computer, winner) {
-    if (winner == "draw") {
-        alert(player.toUpperCase() + " VS " + computer.toUpperCase() + " DRAW! ");
-    } else {
-        alert(player.toUpperCase() + " VS " + computer.toUpperCase() + " THE " + winner.toUpperCase() + " WON! ");
-    }
-}
 
 function decideTheWinner(player, computer) {
     if (player == computer) {
@@ -55,11 +41,6 @@ function decideTheWinner(player, computer) {
 }
 
 function game() {
-    let playerChoice = playerInput();
-    let computerChoice = computerPlay();
-
-    decideTheWinner(playerChoice, computerChoice);
-    game();
 }
 
 window.onLoad(game());
